@@ -12,7 +12,7 @@
 
 let email = document.getElementById("email");
 
-let genera = document.getElementById("button-genera");
+let genera = document.getElementById("button-invia");
 
 genera.addEventListener("click", function() {
   let mail = email.value
