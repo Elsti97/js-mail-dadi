@@ -39,4 +39,23 @@ function invia(){
 }
 
 // * DADI
+let giocatore = document.getElementById("player")
+let pc = document.getElementById("computer")
+let risultato = document.getElementById("risultato")
 
+giocatore.innerHTML = `Il tuo numero:  ${Math.round(Math.random() * 6)}`
+pc.innerHTML = `Il numero del computer: ${Math.round(Math.random() * 6)}`
+
+
+
+if (giocatore > pc) {
+  risultato.innerHTML = `Vittoria`
+}
+
+else if (giocatore < pc) {
+  risultato.innerHTML = `Sconfitta`
+}
+
+else {
+  risultato.innerHTML = `Pareggio`
+}
