@@ -11,14 +11,18 @@
   <!-- MIO CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
 
-  <div class="container mt-3">
+  <!-- * EMAIL -->
+  <div class="mt-3">
     <label for="email">Inserisci la tua email:</label>
     <input type="email" id="email" placeholder="ricordati la @">
-    <button class="btn btn-primary" id="button-invia">Invia</button>
-    <div class="esito"></div>
+    <button onclick="invia(); return false" class="btn btn-primary">Invia</button>
+    <div id="esito"></div>
   </div>
+
+  <!-- * DADI -->
   
   
 

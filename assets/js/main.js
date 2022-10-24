@@ -7,18 +7,36 @@
 // * DADI
 // numero random da 1 a 6 per pc e player
 // if number player > number pc win
-// if number player < number pc lose
+// else if number player < number pc lose
+// else pareggio
 
+const email = document.getElementById("email");
 
-let email = document.getElementById("email");
+let risposta = document.getElementById("esito");
 
-let genera = document.getElementById("button-invia");
+function invia(){
 
-genera.addEventListener("click", function() {
-  let mail = email.value
+  const mail = email.value;
 
-  let mailAccettate = ["aldo@gmail.com", "giovanni@gmail.com", "giacomo@gmail.com"];
+  let mailTrue = false;
 
+  let mailAccettate = ["aldo@gmail.com", "giovanni@gmail.com", "giacomo@gmail.com", "franco@gmail.com", "pippo@gmail.com"];
 
-})
+  for (i = 0; i < mailAccettate.length; i++ ) {
+
+      if ( mail === mailAccettate[i] ){
+          mailTrue = true;
+      }  
+  }
+
+  if (mailTrue === true) {
+      risposta.innerHTML = `Email giusta`
+  }
+
+  else {
+      risposta.innerHTML = `Ricontrolla l'email`
+  }
+}
+
+// * DADI
 
