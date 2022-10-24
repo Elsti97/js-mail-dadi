@@ -9,3 +9,16 @@
 // if number player > number pc win
 // if number player < number pc lose
 
+
+let email = document.getElementById("email");
+
+let genera = document.getElementById("button-genera");
+
+genera.addEventListener("click", function() {
+  let mail = email.value
+
+  let mailAccettate = ["aldo@gmail.com", "giovanni@gmail.com", "giacomo@gmail.com"];
+
+
+})
+
