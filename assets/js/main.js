@@ -39,23 +39,36 @@ function invia(){
 }
 
 // * DADI
-let giocatore = document.getElementById("player")
-let pc = document.getElementById("computer")
+// let giocatore = document.getElementById("player")
+// let pc = document.getElementById("computer")
 let risultato = document.getElementById("risultato")
 
-giocatore.innerHTML = `Il tuo numero:  ${Math.round(Math.random() * 6)}`
-pc.innerHTML = `Il numero del computer: ${Math.round(Math.random() * 6)}`
+let vittoriePlayer = 0;
+let vittoriePc = 0;
 
+let tueVittorie = document.getElementById("vittorieGiocatore");
+let tueSconfitte = document.getElementById("sconfitteGiocatore");
 
-
+function estrazioneMatta(){
+  let giocatore = document.getElementById("player").innerHTML = Math.round(Math.random() * 6);
+  let pc = document.getElementById("computer").innerHTML = Math.round(Math.random() * 6);
+  
 if (giocatore > pc) {
-  risultato.innerHTML = `Vittoria`
+    risultato.innerHTML = `Vittoria`
+    vittoriePlayer = vittoriePlayer + 1;
+  }
+
+  else if (giocatore < pc) {
+    risultato.innerHTML = `Sconfitta`
+    vittoriePc = vittoriePc + 1;
+  }
+
+  else {
+    risultato.innerHTML = `Pareggio`
+  }
+  tueVittorie.innerHTML = `Tue vittorie: ${vittoriePlayer}`
+  tueSconfitte.innerHTML = `Tue sconfitte: ${vittoriePc}`
 }
 
-else if (giocatore < pc) {
-  risultato.innerHTML = `Sconfitta`
-}
 
-else {
-  risultato.innerHTML = `Pareggio`
-}
+
